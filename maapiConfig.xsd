@@ -1,0 +1,175 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="m2mObjects">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="mgmtObj">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="mgmtDefinition" type="mgmtDefinition"/>
+                            <xs:element minOccurs="0" name="corLwm2mObj" type="mgmtDefinition"/>
+                            <xs:element minOccurs="0" name="corMqtt" type="mgmtDefinition"/>
+                            <xs:element name="objAttributes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element maxOccurs="unbounded" minOccurs="0" name="attribute">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element minOccurs="0" name="lwm2m">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="resID" type="xs:int"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element minOccurs="0" name="mqtt">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="resID" type="xs:int"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="onem2m">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="attrName" type="xs:string"/>
+                                                                <xs:element name="op" type="allowedOp"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="dataType" type="dataType" use="required"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="protocols" type="protocols" use="required"/>
+                        <xs:attribute name="className" type="xs:string" use="required"/>
+                        <xs:attribute name="shortName" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="mgmtcmds">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="cmdType">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="code" type="xs:short"/>
+                            <xs:element name="mgmtDefinition" type="mgmtDefinition"/>
+                            <xs:element minOccurs="0" name="lwm2mResId" type="xs:int"/>
+                            <xs:element minOccurs="0" name="mqtt" type="xs:int"/>
+                        </xs:sequence>
+                        <xs:attribute name="name" type="xs:string" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="dataType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="byte"/>
+            <xs:enumeration value="short"/>
+            <xs:enumeration value="int"/>
+            <xs:enumeration value="integer"/>
+            <xs:enumeration value="Integer"/>
+            <xs:enumeration value="long"/>
+            <xs:enumeration value="Long"/>
+            <xs:enumeration value="float"/>
+            <xs:enumeration value="Float"/>
+            <xs:enumeration value="double"/>
+            <xs:enumeration value="Double"/>
+            <xs:enumeration value="char"/>
+            <xs:enumeration value="boolean"/>
+            <xs:enumeration value="Boolean"/>
+            <xs:enumeration value="String"/>
+            <xs:enumeration value="Object"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="allowedOp">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="RO"/>
+            <xs:enumeration value="RW"/>
+            <!--<xs:enumeration value="E"/>-->
+            <xs:enumeration value="WO"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="mgmtDefinition">
+        <xs:annotation>
+            <xs:documentation>This is used for mgmtObj resource.</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:integer">
+            <!--  Start of oneM2M Management Object Definitions -->
+            <!-- unspecified -->
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <!-- firmware -->
+            <xs:enumeration value="1001"/>
+            <!-- software -->
+            <xs:enumeration value="1002"/>
+            <!-- memory -->
+            <xs:enumeration value="1003"/>
+            <!-- areaNwkInfo -->
+            <xs:enumeration value="1004"/>
+            <!-- areaNwkDeviceInfo -->
+            <xs:enumeration value="1005"/>
+            <!-- battery -->
+            <xs:enumeration value="1006"/>
+            <!-- deviceInfo -->
+            <xs:enumeration value="1007"/>
+            <!-- deviceCapability -->
+            <xs:enumeration value="1008"/>
+            <!-- reboot -->
+            <xs:enumeration value="1009"/>
+            <!-- eventLog -->
+            <xs:enumeration value="1010"/>
+            <!-- cmdhPolicy -->
+            <xs:enumeration value="1011"/>
+            <!-- activeCmdhPolicy -->
+            <xs:enumeration value="1012"/>
+            <!-- cmdhDefaults -->
+            <xs:enumeration value="1013"/>
+            <!-- cmdhDefEcValue -->
+            <xs:enumeration value="1014"/>
+            <!-- cmdhEcDefParamValues -->
+            <xs:enumeration value="1015"/>
+            <!-- cmdhLimits -->
+            <xs:enumeration value="1016"/>
+            <!-- cmdhNetworkAccessRules -->
+            <xs:enumeration value="1017"/>
+            <!-- cmdhNwAccessRule -->
+            <xs:enumeration value="1018"/>
+            <!-- cmdhBuffer -->
+            <xs:enumeration value="1019"/>
+            <!--  End of oneM2M Management Object Definitions -->
+            <xs:enumeration value="3301"/>
+            <xs:enumeration value="3302"/>
+            <xs:enumeration value="3303"/>
+            <xs:enumeration value="3304"/>
+            <xs:enumeration value="3311"/>
+            <xs:enumeration value="4400"/>
+            <xs:enumeration value="4401"/>
+            <xs:enumeration value="4402"/>
+            <xs:enumeration value="4403"/>
+            <xs:enumeration value="4404"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="protocol">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="lwm2m"/>
+            <xs:enumeration value="mqtt"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="protocols">
+        <xs:list itemType="protocol"/>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<m2mObjects xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="maapiConfig.xsd">
+    <!-- oneM2M Device Information object -->
+    <mgmtObj className="Firmware" shortName="fwr" protocols="lwm2m mqtt">
+        <mgmtDefinition>1001</mgmtDefinition>
+        <corLwm2mObj>5</corLwm2mObj>
+        <corMqtt>4400</corMqtt>
+        <objAttributes>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>6</resID>
+                </lwm2m>
+                <mqtt>
+                    <resID>3</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>version</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>7</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>firmwareName</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>1</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>url</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>2</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>update</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>3</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>updateStatus</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+        </objAttributes>
+    </mgmtObj>
+    <mgmtObj className="Battery" shortName="bat" protocols="lwm2m">
+        <mgmtDefinition>1006</mgmtDefinition>
+        <corLwm2mObj>3</corLwm2mObj>
+        <objAttributes>
+            <attribute dataType="Integer">
+                <lwm2m>
+                    <resID>9</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>batteryLevel</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>20</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>batteryStatus</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+        </objAttributes>
+    </mgmtObj>
+    <mgmtObj className="Memory" shortName="mem" protocols="mqtt lwm2m">
+        <mgmtDefinition>1003</mgmtDefinition>
+        <corLwm2mObj>3</corLwm2mObj>
+        <corMqtt>4400</corMqtt>
+        <objAttributes>
+            <attribute dataType="Integer">
+                <lwm2m>
+                    <resID>10</resID>
+                </lwm2m>
+                <mqtt>
+                    <resID>9</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>memAvailable</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Integer">
+                <lwm2m>
+                    <resID>21</resID>
+                </lwm2m>
+                <mqtt>
+                    <resID>17</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>memTotal</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+        </objAttributes>
+    </mgmtObj>
+    <mgmtObj className="DeviceInfo" shortName="dvi" protocols="mqtt lwm2m">
+        <mgmtDefinition>1007</mgmtDefinition>
+        <corLwm2mObj>3</corLwm2mObj>
+        <corMqtt>4400</corMqtt>
+        <objAttributes>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>2</resID>
+                </lwm2m>
+                <mqtt>
+                    <resID>2</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>deviceLabel</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>0</resID>
+                </lwm2m>
+                <mqtt>
+                    <resID>0</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>manufacturer</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>1</resID>
+                </lwm2m>
+                <mqtt>
+                    <resID>1</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>model</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>17</resID>
+                </lwm2m>
+                <mqtt>
+                    <resID>14</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>deviceType</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>3</resID>
+                </lwm2m>
+                <mqtt>
+                    <resID>3</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>fwVersion</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>19</resID>
+                </lwm2m>
+                <mqtt>
+                    <resID>16</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>swVersion</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>18</resID>
+                </lwm2m>
+                <mqtt>
+                    <resID>15</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>hwVersion</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+
+            <attribute dataType="Integer">
+                <mqtt>
+                    <resID>6</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>avPwrSrc</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Integer">
+                <mqtt>
+                    <resID>7</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>avPwrSrcVlt</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Integer">
+                <mqtt>
+                    <resID>8</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>avPwrSrcCrt</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <mqtt>
+                    <resID>11</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>crTime</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <mqtt>
+                    <resID>12</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>utcOffset</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <mqtt>
+                    <resID>13</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>timeZone</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+        </objAttributes>
+    </mgmtObj>
+
+
+    <!-- LwM2M Definitions -->
+    <mgmtObj className="IlluminanceSensor" shortName="ilsn" protocols="lwm2m">
+        <mgmtDefinition>3301</mgmtDefinition>
+        <corLwm2mObj>3301</corLwm2mObj>
+        <objAttributes>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>0</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>sensorValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>1</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>minMeasuredValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>2</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>maxMeasuredValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>3</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>minRangeValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>4</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>maxRangeValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>6</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>sensorUnits</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+        </objAttributes>
+    </mgmtObj>
+    <mgmtObj className="PresenceSensor" shortName="prsn" protocols="lwm2m">
+        <mgmtDefinition>3302</mgmtDefinition>
+        <corLwm2mObj>3302</corLwm2mObj>
+        <objAttributes>
+            <attribute dataType="Boolean">
+                <lwm2m>
+                    <resID>0</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>digitalInputState</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Integer">
+                <lwm2m>
+                    <resID>1</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>digitalInputCounter</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>3</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>sensorType</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Integer">
+                <lwm2m>
+                    <resID>4</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>busyToClearDelay</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Integer">
+                <lwm2m>
+                    <resID>5</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>clearToBusyDelay</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+
+
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>6</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>sensorUnits</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+
+
+        </objAttributes>
+    </mgmtObj>
+    <mgmtObj className="TemperatureSensor" shortName="tesn" protocols="lwm2m">
+        <mgmtDefinition>3303</mgmtDefinition>
+        <corLwm2mObj>3303</corLwm2mObj>
+        <objAttributes>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>0</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>sensorValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>1</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>minMeasuredValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>2</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>maxMeasuredValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>3</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>minRangeValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>4</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>maxRangeValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>5</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>sensorUnits</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+        </objAttributes>
+    </mgmtObj>
+    <mgmtObj className="HumiditySensor" shortName="husn" protocols="lwm2m">
+        <mgmtDefinition>3304</mgmtDefinition>
+        <corLwm2mObj>3304</corLwm2mObj>
+        <objAttributes>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>0</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>sensorValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>1</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>minMeasuredValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>2</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>maxMeasuredValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>3</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>minRangeValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>4</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>maxRangeValue</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>5</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>sensorUnits</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+        </objAttributes>
+    </mgmtObj>
+    <mgmtObj className="LightControl" shortName="licn" protocols="lwm2m">
+        <mgmtDefinition>3311</mgmtDefinition>
+        <corLwm2mObj>3311</corLwm2mObj>
+        <objAttributes>
+            <attribute dataType="Boolean">
+                <lwm2m>
+                    <resID>0</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>switchState</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Integer">
+                <lwm2m>
+                    <resID>1</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>dimmer</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Integer">
+                <lwm2m>
+                    <resID>2</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>onTime</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>3</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>cumulativePower</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+
+            <attribute dataType="Double">
+                <lwm2m>
+                    <resID>4</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>powerFactor</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>5</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>colour</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <lwm2m>
+                    <resID>6</resID>
+                </lwm2m>
+                <onem2m>
+                    <attrName>sensorUnits</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+        </objAttributes>
+    </mgmtObj>
+
+    <!-- MQTT Definitions -->
+    <mgmtObj className="Refrigerator" shortName="rfg" protocols="mqtt">
+        <mgmtDefinition>4401</mgmtDefinition>
+        <corMqtt>4401</corMqtt>
+        <objAttributes>
+            <attribute dataType="String">
+                <mqtt>
+                    <resID>0</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>refrigerant</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+
+            <attribute dataType="String">
+                <mqtt>
+                    <resID>2</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>powercoldStatus</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+
+            <attribute dataType="String">
+                <mqtt>
+                    <resID>3</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>doorStatus</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+
+            <attribute dataType="Float">
+                <mqtt>
+                    <resID>5</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>humidity</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Object">
+                <mqtt>
+                    <resID>7</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>reminderList</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <mqtt>
+                    <resID>8</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>hotWaterDispenserStatus</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+        </objAttributes>
+    </mgmtObj>
+    <mgmtObj className="CoffeeMaker" shortName="cmsn" protocols="mqtt">
+        <mgmtDefinition>4402</mgmtDefinition>
+        <corMqtt>4402</corMqtt>
+        <objAttributes>
+            <attribute dataType="Float">
+                <mqtt>
+                    <resID>0</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>brewingTemperature</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Integer">
+                <mqtt>
+                    <resID>2</resID>
+                </mqtt>
+                <onem2m>
+
+                    <attrName>preSoakTime</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Boolean">
+                <mqtt>
+                    <resID>3</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>delayedBrew</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Object">
+                <mqtt>
+                    <resID>4</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>brewingProfile</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Object">
+                <mqtt>
+                    <resID>5</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>defaultBrewingProfile</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Object">
+                <mqtt>
+                    <resID>6</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>beansReport</attrName>
+                    <op>RO</op>
+                </onem2m>
+            </attribute>
+        </objAttributes>
+    </mgmtObj>
+    <mgmtObj className="AirConditioner" shortName="acon" protocols="mqtt">
+        <mgmtDefinition>4403</mgmtDefinition>
+        <corMqtt>4403</corMqtt>
+        <objAttributes>
+            <attribute dataType="Float">
+                <mqtt>
+                    <resID>1</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>windDirection</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Float">
+                <mqtt>
+                    <resID>3</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>temperature</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="String">
+                <mqtt>
+                    <resID>4</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>mode</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Integer">
+                <mqtt>
+                    <resID>5</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>fanSpeed</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+        </objAttributes>
+    </mgmtObj>
+    <mgmtObj className="CurtainGear" shortName="cugr" protocols="mqtt">
+        <mgmtDefinition>4404</mgmtDefinition>
+        <corMqtt>4404</corMqtt>
+        <objAttributes>
+            <attribute dataType="String">
+                <mqtt>
+                    <resID>1</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>status</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+            <attribute dataType="Object">
+                <mqtt>
+                    <resID>2</resID>
+                </mqtt>
+                <onem2m>
+                    <attrName>autoExecutionProfile</attrName>
+                    <op>RW</op>
+                </onem2m>
+            </attribute>
+        </objAttributes>
+    </mgmtObj>
+</m2mObjects>

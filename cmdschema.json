@@ -1,0 +1,60 @@
+{
+  "$id": "http://iot.mars.com/cmdSchema.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "mgmtcmds": {
+      "$id": "/properties/mgmtcmds",
+      "type": "object",
+      "properties": {
+        "cmdType": {
+          "$id": "/properties/mgmtcmds/properties/cmdType",
+          "type": "array",
+          "items": {
+            "$id": "/properties/mgmtcmds/properties/cmdType/items",
+            "type": "object",
+            "properties": {
+              "code": {
+                "$id": "/properties/mgmtcmds/properties/cmdType/items/properties/code",
+                "type": "integer",
+                "title": "The Code Schema ",
+                "default": 0,
+                "examples": [
+                  1001
+                ]
+              },
+              "mgmtDefinition": {
+                "$id": "/properties/mgmtcmds/properties/cmdType/items/properties/mgmtDefinition",
+                "type": "integer",
+                "title": "The Mgmtdefinition Schema ",
+                "default": 0,
+                "examples": [
+                  3301
+                ]
+              },
+              "lwm2mResId": {
+                "$id": "/properties/mgmtcmds/properties/cmdType/items/properties/lwm2mResId",
+                "type": "integer",
+                "title": "The Lwm2mresid Schema ",
+                "default": 0,
+                "examples": [
+                  3301
+                ]
+              },
+              "name": {
+                "$id": "/properties/mgmtcmds/properties/cmdType/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema ",
+                "default": "",
+                "examples": [
+                  "RESET_MIN_MAX_VAL"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

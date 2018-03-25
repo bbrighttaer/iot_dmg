@@ -1,0 +1,161 @@
+{
+  "$id": "http://iot.mars.com/mgmtobjSchema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "m2mObjects": {
+      "$id": "/properties/m2mObjects",
+      "type": "object",
+      "properties": {
+        "mgmtObj": {
+          "$id": "/properties/m2mObjects/properties/mgmtObj",
+          "type": "array",
+          "items": {
+            "$id": "/properties/m2mObjects/properties/mgmtObj/items",
+            "type": "object",
+            "properties": {
+              "mgmtDefinition": {
+                "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/mgmtDefinition",
+                "type": "integer",
+                "title": "The Mgmtdefinition Schema ",
+                "default": 0,
+                "examples": [
+                  1001
+                ]
+              },
+              "corLwm2mObj": {
+                "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/corLwm2mObj",
+                "type": "integer",
+                "title": "The Corlwm2mobj Schema ",
+                "default": 0,
+                "examples": [
+                  1001
+                ]
+              },
+              "corMqtt": {
+                "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/corMqtt",
+                "type": "integer",
+                "title": "The Cormqtt Schema ",
+                "default": 0,
+                "examples": [
+                  4400
+                ]
+              },
+              "objAttributes": {
+                "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/objAttributes",
+                "type": "object",
+                "properties": {
+                  "attribute": {
+                    "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/objAttributes/properties/attribute",
+                    "type": "array",
+                    "items": {
+                      "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/objAttributes/properties/attribute/items",
+                      "type": "object",
+                      "properties": {
+                        "lwm2m": {
+                          "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/objAttributes/properties/attribute/items/properties/lwm2m",
+                          "type": "object",
+                          "properties": {
+                            "resID": {
+                              "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/objAttributes/properties/attribute/items/properties/lwm2m/properties/resID",
+                              "type": "integer",
+                              "title": "The Resid Schema ",
+                              "default": 0,
+                              "examples": [
+                                6
+                              ]
+                            }
+                          }
+                        },
+                        "mqtt": {
+                          "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/objAttributes/properties/attribute/items/properties/mqtt",
+                          "type": "object",
+                          "properties": {
+                            "resID": {
+                              "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/objAttributes/properties/attribute/items/properties/mqtt/properties/resID",
+                              "type": "integer",
+                              "title": "The Resid Schema ",
+                              "default": 0,
+                              "examples": [
+                                3
+                              ]
+                            }
+                          }
+                        },
+                        "onem2m": {
+                          "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/objAttributes/properties/attribute/items/properties/onem2m",
+                          "type": "object",
+                          "properties": {
+                            "attrName": {
+                              "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/objAttributes/properties/attribute/items/properties/onem2m/properties/attrName",
+                              "type": "string",
+                              "title": "The Attrname Schema ",
+                              "default": "",
+                              "examples": [
+                                "version"
+                              ]
+                            },
+                            "op": {
+                              "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/objAttributes/properties/attribute/items/properties/onem2m/properties/op",
+                              "type": "string",
+                              "title": "The Op Schema ",
+                              "default": "",
+                              "examples": [
+                                "RO"
+                              ],
+                              "enum": [
+                                "RO",
+                                "RW",
+                                "WO"
+                              ]
+                            }
+                          }
+                        },
+                        "dataType": {
+                          "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/objAttributes/properties/attribute/items/properties/dataType",
+                          "type": "string",
+                          "title": "The Datatype Schema ",
+                          "default": "",
+                          "examples": [
+                            "String"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "className": {
+                "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/className",
+                "type": "string",
+                "title": "The Classname Schema ",
+                "default": "",
+                "examples": [
+                  "Firmware"
+                ]
+              },
+              "shortName": {
+                "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/shortName",
+                "type": "string",
+                "title": "The Shortname Schema ",
+                "default": "",
+                "examples": [
+                  "fwr"
+                ]
+              },
+              "protocols": {
+                "$id": "/properties/m2mObjects/properties/mgmtObj/items/properties/protocols",
+                "type": "string",
+                "title": "The Protocols Schema ",
+                "default": "",
+                "examples": [
+                  "lwm2m mqtt"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

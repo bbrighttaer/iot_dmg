@@ -1,0 +1,100 @@
+{
+  "cmdType": [
+    {
+      "code": 1001,
+      "mgmtDefinition": 3301,
+      "lwm2mResId": 5,
+      "name": "RESET_MIN_MAX_VAL"
+    },
+    {
+      "code": 1002,
+      "mgmtDefinition": 3302,
+      "lwm2mResId": 2,
+      "name": "DIGITAL_INPUT_COUNTER_RESET"
+    },
+    {
+      "code": 1003,
+      "mgmtDefinition": 3303,
+      "lwm2mResId": 6,
+      "name": "TEMP_RESET_MIN_MAX_VAL"
+    },
+    {
+      "code": 1004,
+      "mgmtDefinition": 3304,
+      "lwm2mResId": 6,
+      "name": "HUMID_RESET_MIN_MAX_VAL"
+    },
+    {
+      "code": 1005,
+      "mgmtDefinition": 1009,
+      "lwm2mResId": 4,
+      "name": "REBOOT_RESOURCE"
+    },
+    {
+      "code": 1006,
+      "mgmtDefinition": 1009,
+      "lwm2mResId": 5,
+      "name": "FACTORY_RESET"
+    },
+    {
+      "code": 4001,
+      "mgmtDefinition": 4401,
+      "mqtt": 1,
+      "name": "POWER_COLD_VAL"
+    },
+    {
+      "code": 4002,
+      "mgmtDefinition": 4401,
+      "mqtt": 4,
+      "name": "DOOR_VAL"
+    },
+    {
+      "code": 4003,
+      "mgmtDefinition": 4401,
+      "mqtt": 4,
+      "name": "HOT_WATER_VAL"
+    },
+    {
+      "code": 4004,
+      "mgmtDefinition": 4402,
+      "mqtt": 1,
+      "name": "BREW_VAL"
+    },
+    {
+      "code": 4005,
+      "mgmtDefinition": 4403,
+      "mqtt": 0,
+      "name": "AC_POWER_VAL"
+    },
+    {
+      "code": 4006,
+      "mgmtDefinition": 4403,
+      "mqtt": 2,
+      "name": "SWING_VAL"
+    },
+    {
+      "code": 4007,
+      "mgmtDefinition": 4404,
+      "mqtt": 0,
+      "name": "CONTROL_VAL"
+    },
+    {
+      "code": 4008,
+      "mgmtDefinition": 4400,
+      "mqtt": 4400,
+      "name": "Factory Reset"
+    },
+    {
+      "code": 4009,
+      "mgmtDefinition": 4400,
+      "mqtt": 4400,
+      "name": "Reboot"
+    },
+    {
+      "code": 4010,
+      "mgmtDefinition": 4400,
+      "mqtt": 4400,
+      "name": "Reset_Error_Code"
+    }
+  ]
+}

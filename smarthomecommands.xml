@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mgmtcmds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="maapiConfig.xsd">
+    <cmdType name="RESET_MIN_MAX_VAL">
+        <code>1001</code>
+        <mgmtDefinition>3301</mgmtDefinition>
+        <lwm2mResId>5</lwm2mResId>
+    </cmdType>
+    <cmdType name="DIGITAL_INPUT_COUNTER_RESET">
+        <code>1002</code>
+        <mgmtDefinition>3302</mgmtDefinition>
+        <lwm2mResId>2</lwm2mResId>
+    </cmdType>
+    <cmdType name="TEMP_RESET_MIN_MAX_VAL">
+        <code>1003</code>
+        <mgmtDefinition>3303</mgmtDefinition>
+        <lwm2mResId>6</lwm2mResId>
+    </cmdType>
+    <cmdType name="HUMID_RESET_MIN_MAX_VAL">
+        <code>1004</code>
+        <mgmtDefinition>3304</mgmtDefinition>
+        <lwm2mResId>6</lwm2mResId>
+    </cmdType>
+    <cmdType name="REBOOT_RESOURCE">
+        <code>1005</code>
+        <mgmtDefinition>1009</mgmtDefinition>
+        <lwm2mResId>4</lwm2mResId>
+    </cmdType>
+    <cmdType name="FACTORY_RESET">
+        <code>1006</code>
+        <mgmtDefinition>1009</mgmtDefinition>
+        <lwm2mResId>5</lwm2mResId>
+    </cmdType>
+
+    <!-- MQTT Commands -->
+    <cmdType name="POWER_COLD_VAL">
+        <code>4001</code>
+        <mgmtDefinition>4401</mgmtDefinition>
+        <mqtt>1</mqtt>
+    </cmdType>
+    <cmdType name="DOOR_VAL">
+        <code>4002</code>
+        <mgmtDefinition>4401</mgmtDefinition>
+        <mqtt>4</mqtt>
+    </cmdType>
+    <cmdType name="HOT_WATER_VAL">
+        <code>4003</code>
+        <mgmtDefinition>4401</mgmtDefinition>
+        <mqtt>4</mqtt>
+    </cmdType>
+
+    <cmdType name="BREW_VAL">
+        <code>4004</code>
+        <mgmtDefinition>4402</mgmtDefinition>
+        <mqtt>1</mqtt>
+    </cmdType>
+
+    <cmdType name="AC_POWER_VAL">
+        <code>4005</code>
+        <mgmtDefinition>4403</mgmtDefinition>
+        <mqtt>0</mqtt>
+    </cmdType>
+    <cmdType name="SWING_VAL">
+        <code>4006</code>
+        <mgmtDefinition>4403</mgmtDefinition>
+        <mqtt>2</mqtt>
+    </cmdType>
+
+    <cmdType name="CONTROL_VAL">
+        <code>4007</code>
+        <mgmtDefinition>4404</mgmtDefinition>
+        <mqtt>0</mqtt>
+    </cmdType>
+
+    <cmdType name="Factory Reset">
+        <code>4008</code>
+        <mgmtDefinition>4400</mgmtDefinition>
+        <mqtt>4400</mqtt>
+    </cmdType>
+    <cmdType name="Reboot">
+        <code>4009</code>
+        <mgmtDefinition>4400</mgmtDefinition>
+        <mqtt>4400</mqtt>
+    </cmdType>
+    <cmdType name="Reset_Error_Code">
+        <code>4010</code>
+        <mgmtDefinition>4400</mgmtDefinition>
+        <mqtt>4400</mqtt>
+    </cmdType>
+</mgmtcmds>

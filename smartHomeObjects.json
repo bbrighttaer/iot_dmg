@@ -1,0 +1,890 @@
+{
+  "mgmtObj": [
+    {
+      "mgmtDefinition": 1001,
+      "corLwm2mObj": 5,
+      "corMqtt": 4400,
+      "objAttributes": {
+        "attribute": [
+          {
+            "lwm2m": {
+              "resID": 6
+            },
+            "mqtt": {
+              "resID": 3
+            },
+            "onem2m": {
+              "attrName": "version",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "lwm2m": {
+              "resID": 7
+            },
+            "onem2m": {
+              "attrName": "firmwareName",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "lwm2m": {
+              "resID": 1
+            },
+            "onem2m": {
+              "attrName": "url",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "lwm2m": {
+              "resID": 2
+            },
+            "onem2m": {
+              "attrName": "update",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "lwm2m": {
+              "resID": 3
+            },
+            "onem2m": {
+              "attrName": "updateStatus",
+              "op": "RO"
+            },
+            "dataType": "String"
+          }
+        ]
+      },
+      "className": "Firmware",
+      "shortName": "fwr",
+      "protocols": "lwm2m mqtt"
+    },
+    {
+      "mgmtDefinition": 1006,
+      "corLwm2mObj": 3,
+      "objAttributes": {
+        "attribute": [
+          {
+            "lwm2m": {
+              "resID": 9
+            },
+            "onem2m": {
+              "attrName": "batteryLevel",
+              "op": "RO"
+            },
+            "dataType": "Integer"
+          },
+          {
+            "lwm2m": {
+              "resID": 20
+            },
+            "onem2m": {
+              "attrName": "batteryStatus",
+              "op": "RO"
+            },
+            "dataType": "String"
+          }
+        ]
+      },
+      "className": "Battery",
+      "shortName": "bat",
+      "protocols": "lwm2m"
+    },
+    {
+      "mgmtDefinition": 1003,
+      "corLwm2mObj": 3,
+      "corMqtt": 4400,
+      "objAttributes": {
+        "attribute": [
+          {
+            "lwm2m": {
+              "resID": 10
+            },
+            "mqtt": {
+              "resID": 9
+            },
+            "onem2m": {
+              "attrName": "memAvailable",
+              "op": "RO"
+            },
+            "dataType": "Integer"
+          },
+          {
+            "lwm2m": {
+              "resID": 21
+            },
+            "mqtt": {
+              "resID": 17
+            },
+            "onem2m": {
+              "attrName": "memTotal",
+              "op": "RO"
+            },
+            "dataType": "Integer"
+          }
+        ]
+      },
+      "className": "Memory",
+      "shortName": "mem",
+      "protocols": "mqtt lwm2m"
+    },
+    {
+      "mgmtDefinition": 1007,
+      "corLwm2mObj": 3,
+      "corMqtt": 4400,
+      "objAttributes": {
+        "attribute": [
+          {
+            "lwm2m": {
+              "resID": 2
+            },
+            "mqtt": {
+              "resID": 2
+            },
+            "onem2m": {
+              "attrName": "deviceLabel",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "lwm2m": {
+              "resID": 0
+            },
+            "mqtt": {
+              "resID": 0
+            },
+            "onem2m": {
+              "attrName": "manufacturer",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "lwm2m": {
+              "resID": 1
+            },
+            "mqtt": {
+              "resID": 1
+            },
+            "onem2m": {
+              "attrName": "model",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "lwm2m": {
+              "resID": 17
+            },
+            "mqtt": {
+              "resID": 14
+            },
+            "onem2m": {
+              "attrName": "deviceType",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "lwm2m": {
+              "resID": 3
+            },
+            "mqtt": {
+              "resID": 3
+            },
+            "onem2m": {
+              "attrName": "fwVersion",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "lwm2m": {
+              "resID": 19
+            },
+            "mqtt": {
+              "resID": 16
+            },
+            "onem2m": {
+              "attrName": "swVersion",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "lwm2m": {
+              "resID": 18
+            },
+            "mqtt": {
+              "resID": 15
+            },
+            "onem2m": {
+              "attrName": "hwVersion",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "mqtt": {
+              "resID": 6
+            },
+            "onem2m": {
+              "attrName": "avPwrSrc",
+              "op": "RO"
+            },
+            "dataType": "Integer"
+          },
+          {
+            "mqtt": {
+              "resID": 7
+            },
+            "onem2m": {
+              "attrName": "avPwrSrcVlt",
+              "op": "RO"
+            },
+            "dataType": "Integer"
+          },
+          {
+            "mqtt": {
+              "resID": 8
+            },
+            "onem2m": {
+              "attrName": "avPwrSrcCrt",
+              "op": "RO"
+            },
+            "dataType": "Integer"
+          },
+          {
+            "mqtt": {
+              "resID": 11
+            },
+            "onem2m": {
+              "attrName": "crTime",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "mqtt": {
+              "resID": 12
+            },
+            "onem2m": {
+              "attrName": "utcOffset",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "mqtt": {
+              "resID": 13
+            },
+            "onem2m": {
+              "attrName": "timeZone",
+              "op": "RO"
+            },
+            "dataType": "String"
+          }
+        ]
+      },
+      "className": "DeviceInfo",
+      "shortName": "dvi",
+      "protocols": "mqtt lwm2m"
+    },
+    {
+      "mgmtDefinition": 3301,
+      "corLwm2mObj": 3301,
+      "objAttributes": {
+        "attribute": [
+          {
+            "lwm2m": {
+              "resID": 0
+            },
+            "onem2m": {
+              "attrName": "sensorValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 1
+            },
+            "onem2m": {
+              "attrName": "minMeasuredValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 2
+            },
+            "onem2m": {
+              "attrName": "maxMeasuredValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 3
+            },
+            "onem2m": {
+              "attrName": "minRangeValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 4
+            },
+            "onem2m": {
+              "attrName": "maxRangeValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 6
+            },
+            "onem2m": {
+              "attrName": "sensorUnits",
+              "op": "RO"
+            },
+            "dataType": "String"
+          }
+        ]
+      },
+      "className": "IlluminanceSensor",
+      "shortName": "ilsn",
+      "protocols": "lwm2m"
+    },
+    {
+      "mgmtDefinition": 3302,
+      "corLwm2mObj": 3302,
+      "objAttributes": {
+        "attribute": [
+          {
+            "lwm2m": {
+              "resID": 0
+            },
+            "onem2m": {
+              "attrName": "digitalInputState",
+              "op": "RO"
+            },
+            "dataType": "Boolean"
+          },
+          {
+            "lwm2m": {
+              "resID": 1
+            },
+            "onem2m": {
+              "attrName": "digitalInputCounter",
+              "op": "RO"
+            },
+            "dataType": "Integer"
+          },
+          {
+            "lwm2m": {
+              "resID": 3
+            },
+            "onem2m": {
+              "attrName": "sensorType",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "lwm2m": {
+              "resID": 4
+            },
+            "onem2m": {
+              "attrName": "busyToClearDelay",
+              "op": "RW"
+            },
+            "dataType": "Integer"
+          },
+          {
+            "lwm2m": {
+              "resID": 5
+            },
+            "onem2m": {
+              "attrName": "clearToBusyDelay",
+              "op": "RW"
+            },
+            "dataType": "Integer"
+          },
+          {
+            "lwm2m": {
+              "resID": 6
+            },
+            "onem2m": {
+              "attrName": "sensorUnits",
+              "op": "RO"
+            },
+            "dataType": "String"
+          }
+        ]
+      },
+      "className": "PresenceSensor",
+      "shortName": "prsn",
+      "protocols": "lwm2m"
+    },
+    {
+      "mgmtDefinition": 3303,
+      "corLwm2mObj": 3303,
+      "objAttributes": {
+        "attribute": [
+          {
+            "lwm2m": {
+              "resID": 0
+            },
+            "onem2m": {
+              "attrName": "sensorValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 1
+            },
+            "onem2m": {
+              "attrName": "minMeasuredValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 2
+            },
+            "onem2m": {
+              "attrName": "maxMeasuredValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 3
+            },
+            "onem2m": {
+              "attrName": "minRangeValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 4
+            },
+            "onem2m": {
+              "attrName": "maxRangeValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 5
+            },
+            "onem2m": {
+              "attrName": "sensorUnits",
+              "op": "RO"
+            },
+            "dataType": "String"
+          }
+        ]
+      },
+      "className": "TemperatureSensor",
+      "shortName": "tesn",
+      "protocols": "lwm2m"
+    },
+    {
+      "mgmtDefinition": 3304,
+      "corLwm2mObj": 3304,
+      "objAttributes": {
+        "attribute": [
+          {
+            "lwm2m": {
+              "resID": 0
+            },
+            "onem2m": {
+              "attrName": "sensorValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 1
+            },
+            "onem2m": {
+              "attrName": "minMeasuredValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 2
+            },
+            "onem2m": {
+              "attrName": "maxMeasuredValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 3
+            },
+            "onem2m": {
+              "attrName": "minRangeValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 4
+            },
+            "onem2m": {
+              "attrName": "maxRangeValue",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 5
+            },
+            "onem2m": {
+              "attrName": "sensorUnits",
+              "op": "RO"
+            },
+            "dataType": "String"
+          }
+        ]
+      },
+      "className": "HumiditySensor",
+      "shortName": "husn",
+      "protocols": "lwm2m"
+    },
+    {
+      "mgmtDefinition": 3311,
+      "corLwm2mObj": 3311,
+      "objAttributes": {
+        "attribute": [
+          {
+            "lwm2m": {
+              "resID": 0
+            },
+            "onem2m": {
+              "attrName": "switchState",
+              "op": "RW"
+            },
+            "dataType": "Boolean"
+          },
+          {
+            "lwm2m": {
+              "resID": 1
+            },
+            "onem2m": {
+              "attrName": "dimmer",
+              "op": "RW"
+            },
+            "dataType": "Integer"
+          },
+          {
+            "lwm2m": {
+              "resID": 2
+            },
+            "onem2m": {
+              "attrName": "onTime",
+              "op": "RW"
+            },
+            "dataType": "Integer"
+          },
+          {
+            "lwm2m": {
+              "resID": 3
+            },
+            "onem2m": {
+              "attrName": "cumulativePower",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 4
+            },
+            "onem2m": {
+              "attrName": "powerFactor",
+              "op": "RO"
+            },
+            "dataType": "Double"
+          },
+          {
+            "lwm2m": {
+              "resID": 5
+            },
+            "onem2m": {
+              "attrName": "colour",
+              "op": "RW"
+            },
+            "dataType": "String"
+          },
+          {
+            "lwm2m": {
+              "resID": 6
+            },
+            "onem2m": {
+              "attrName": "sensorUnits",
+              "op": "RO"
+            },
+            "dataType": "String"
+          }
+        ]
+      },
+      "className": "LightControl",
+      "shortName": "licn",
+      "protocols": "lwm2m"
+    },
+    {
+      "mgmtDefinition": 4401,
+      "corMqtt": 4401,
+      "objAttributes": {
+        "attribute": [
+          {
+            "mqtt": {
+              "resID": 0
+            },
+            "onem2m": {
+              "attrName": "refrigerant",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "mqtt": {
+              "resID": 2
+            },
+            "onem2m": {
+              "attrName": "powercoldStatus",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "mqtt": {
+              "resID": 3
+            },
+            "onem2m": {
+              "attrName": "doorStatus",
+              "op": "RO"
+            },
+            "dataType": "String"
+          },
+          {
+            "mqtt": {
+              "resID": 5
+            },
+            "onem2m": {
+              "attrName": "humidity",
+              "op": "RO"
+            },
+            "dataType": "Float"
+          },
+          {
+            "mqtt": {
+              "resID": 7
+            },
+            "onem2m": {
+              "attrName": "reminderList",
+              "op": "RW"
+            },
+            "dataType": "Object"
+          },
+          {
+            "mqtt": {
+              "resID": 8
+            },
+            "onem2m": {
+              "attrName": "hotWaterDispenserStatus",
+              "op": "RO"
+            },
+            "dataType": "String"
+          }
+        ]
+      },
+      "className": "Refrigerator",
+      "shortName": "rfg",
+      "protocols": "mqtt"
+    },
+    {
+      "mgmtDefinition": 4402,
+      "corMqtt": 4402,
+      "objAttributes": {
+        "attribute": [
+          {
+            "mqtt": {
+              "resID": 0
+            },
+            "onem2m": {
+              "attrName": "brewingTemperature",
+              "op": "RW"
+            },
+            "dataType": "Float"
+          },
+          {
+            "mqtt": {
+              "resID": 2
+            },
+            "onem2m": {
+              "attrName": "preSoakTime",
+              "op": "RW"
+            },
+            "dataType": "Integer"
+          },
+          {
+            "mqtt": {
+              "resID": 3
+            },
+            "onem2m": {
+              "attrName": "delayedBrew",
+              "op": "RW"
+            },
+            "dataType": "Boolean"
+          },
+          {
+            "mqtt": {
+              "resID": 4
+            },
+            "onem2m": {
+              "attrName": "brewingProfile",
+              "op": "RW"
+            },
+            "dataType": "Object"
+          },
+          {
+            "mqtt": {
+              "resID": 5
+            },
+            "onem2m": {
+              "attrName": "defaultBrewingProfile",
+              "op": "RW"
+            },
+            "dataType": "Object"
+          },
+          {
+            "mqtt": {
+              "resID": 6
+            },
+            "onem2m": {
+              "attrName": "beansReport",
+              "op": "RO"
+            },
+            "dataType": "Object"
+          }
+        ]
+      },
+      "className": "CoffeeMaker",
+      "shortName": "cmsn",
+      "protocols": "mqtt"
+    },
+    {
+      "mgmtDefinition": 4403,
+      "corMqtt": 4403,
+      "objAttributes": {
+        "attribute": [
+          {
+            "mqtt": {
+              "resID": 1
+            },
+            "onem2m": {
+              "attrName": "windDirection",
+              "op": "RW"
+            },
+            "dataType": "Float"
+          },
+          {
+            "mqtt": {
+              "resID": 3
+            },
+            "onem2m": {
+              "attrName": "temperature",
+              "op": "RW"
+            },
+            "dataType": "Float"
+          },
+          {
+            "mqtt": {
+              "resID": 4
+            },
+            "onem2m": {
+              "attrName": "mode",
+              "op": "RW"
+            },
+            "dataType": "String"
+          },
+          {
+            "mqtt": {
+              "resID": 5
+            },
+            "onem2m": {
+              "attrName": "fanSpeed",
+              "op": "RW"
+            },
+            "dataType": "Integer"
+          }
+        ]
+      },
+      "className": "AirConditioner",
+      "shortName": "acon",
+      "protocols": "mqtt"
+    },
+    {
+      "mgmtDefinition": 4404,
+      "corMqtt": 4404,
+      "objAttributes": {
+        "attribute": [
+          {
+            "mqtt": {
+              "resID": 1
+            },
+            "onem2m": {
+              "attrName": "status",
+              "op": "RW"
+            },
+            "dataType": "String"
+          },
+          {
+            "mqtt": {
+              "resID": 2
+            },
+            "onem2m": {
+              "attrName": "autoExecutionProfile",
+              "op": "RW"
+            },
+            "dataType": "Object"
+          }
+        ]
+      },
+      "className": "CurtainGear",
+      "shortName": "cugr",
+      "protocols": "mqtt"
+    }
+  ]
+}
