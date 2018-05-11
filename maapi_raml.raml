@@ -1,0 +1,536 @@
+#%RAML 1.0
+title: 
+    value: MaaPI APIs
+baseUri: 
+    value: "http://localhost:8080/maapi/onem2m/cse/"
+mediaType: "*/*"
+version: 
+    value: 1.0
+types: 
+    Resource: 
+        type: object
+        description: 
+            value: |
+                <p>Java class for resource complex type.<p><p>The following schema fragment specifies the expected content contained within this class.<p><pre>&lt;complexType name="resource"&gt;&lt;complexContent&gt;&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;&lt;sequence&gt;&lt;element name="resourceType" type="{http://www.onem2m.org/xml/protocols}resourceType"/&gt;&lt;element name="resourceID" type="{http://www.onem2m.org/xml/protocols}ID"/&gt;&lt;element name="parentID" type="{http://www.onem2m.org/xml/protocols}nhURI"/&gt;&lt;element name="creationTime" type="{http://www.onem2m.org/xml/protocols}timestamp"/&gt;&lt;element name="lastModifiedTime" type="{http://www.onem2m.org/xml/protocols}timestamp"/&gt;&lt;element name="labels" type="{http://www.onem2m.org/xml/protocols}labels" minOccurs="0"/&gt;&lt;/sequence&gt;&lt;attribute name="name" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;&lt;/restriction&gt;&lt;/complexContent&gt;&lt;/complexType&gt;</pre>
+        properties: 
+            creationTime: 
+                type: string
+                displayName: 
+                    value: creationTime
+            labels: 
+                type: array
+                items: 
+                    type: string
+                    displayName: 
+                        value: items
+                displayName: 
+                    value: labels
+            lastModifiedTime: 
+                type: string
+                displayName: 
+                    value: lastModifiedTime
+            name: 
+                type: string
+                displayName: 
+                    value: name
+            parentID: 
+                type: string
+                displayName: 
+                    value: parentID
+            resourceID: 
+                type: string
+                displayName: 
+                    value: resourceID
+            resourceType: 
+                format: int32
+                type: integer
+                displayName: 
+                    value: resourceType
+        example: 
+            strict: false
+            value: 
+                resourceID: csedmg/nd.House8.living_room.humidity_sensor
+                lastModifiedTime: "2018-05-11T07:24:46.794Z"
+                creationTime: "2018-05-11T07:24:46.794Z"
+                name: nd.House8.living_room.humidity_sensor
+                parentID: csedmg
+                labels: "['IoT', 'lwm2m', 'Node']"
+                resourceType: 14
+            displayName: 
+                value: example
+        displayName: 
+            value: Resource
+    PrimitiveContent: 
+        type: object
+        description: 
+            value: |
+                <p>Java class for primitiveContent complex type.<p><p>The following schema fragment specifies the expected content contained within this class.<p><pre>&lt;complexType name="primitiveContent"&gt;&lt;complexContent&gt;&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;&lt;sequence&gt;&lt;any processContents='lax' namespace='http://www.onem2m.org/xml/protocols' maxOccurs="unbounded" minOccurs="0"/&gt;&lt;/sequence&gt;&lt;/restriction&gt;&lt;/complexContent&gt;&lt;/complexType&gt;</pre>
+        properties: 
+            any: 
+                type: array
+                items: 
+                    type: Object
+                    displayName: 
+                        value: items
+                displayName: 
+                    value: any
+        example: 
+            strict: false
+            value: 
+                any: |
+                    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+                    <m2m:pc xmlns:m2m="http://www.onem2m.org/xml/protocols" xmlns:mqtt="http://www.mqtt.marslab.org" xmlns:ns4="http://www.marslab.org/xml/protocols">
+                        <m2m:nod rn="nd.House4.living_room.light_control">
+                            <ty>14</ty>
+                            <ri>csedmg/nd.House4.living_room.light_control</ri>
+                            <pi>csedmg</pi>
+                            <ct>2018-05-11T07:24:46.783Z</ct>
+                            <lt>2018-05-11T07:24:46.783Z</lt>
+                            <lbl>IoT lwm2m Node</lbl>
+                            <hcl>csedmg</hcl>
+                            <ch rn="LightControl" ty="13">http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House4.living_room.light_control/LightControl</ch>
+                            <ch rn="Battery" ty="13">http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House4.living_room.light_control/Battery</ch>
+                            <ch rn="Memory" ty="13">http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House4.living_room.light_control/Memory</ch>
+                            <ch rn="DeviceInfo" ty="13">http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House4.living_room.light_control/DeviceInfo</ch>
+                        </m2m:nod>
+                    </m2m:pc>
+            displayName: 
+                value: example
+        displayName: 
+            value: PrimitiveContent
+    Object: 
+        type: object
+        description: 
+            value: |
+                <p>Java class for primitiveContent complex type.<p><p>The following schema fragment specifies the expected content contained within this class.<p><pre>&lt;complexType name="primitiveContent"&gt;&lt;complexContent&gt;&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;&lt;sequence&gt;&lt;any processContents='lax' namespace='http://www.onem2m.org/xml/protocols' maxOccurs="unbounded" minOccurs="0"/&gt;&lt;/sequence&gt;&lt;/restriction&gt;&lt;/complexContent&gt;&lt;/complexType&gt;</pre>
+        displayName: 
+            value: Object
+/onem2m: 
+    /res/{uri: .+}: 
+        patch: 
+            responses: 
+                200: 
+                    body: 
+                        application/json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: application/json
+                        application/vnd.onem2m-ntfy+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-ntfy+json"
+                        application/vnd.onem2m-attrs+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-attrs+json"
+                        application/vnd.onem2m-res+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-res+json"
+                        application/vnd.onem2m-attrs+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-attrs+xml"
+                        application/vnd.onem2m-ntfy+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-ntfy+xml"
+                        application/vnd.onem2m-res+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-res+xml"
+                        application/xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: application/xml
+                    displayName: 
+                        value: 200
+            headers: 
+                x-m2m-ri: 
+                    type: 
+                        type: string
+                        displayName: 
+                            value: type
+                    displayName: 
+                        value: "x-m2m-ri"
+            body: 
+                application/json: 
+                    type: Resource
+                    displayName: 
+                        value: application/json
+                application/vnd.onem2m-ntfy+json: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-ntfy+json"
+                application/vnd.onem2m-attrs+json: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-attrs+json"
+                application/vnd.onem2m-res+json: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-res+json"
+                application/vnd.onem2m-attrs+xml: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-attrs+xml"
+                application/vnd.onem2m-ntfy+xml: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-ntfy+xml"
+                application/vnd.onem2m-res+xml: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-res+xml"
+                application/xml: 
+                    type: Resource
+                    displayName: 
+                        value: application/xml
+            displayName: 
+                value: patch
+        post: 
+            responses: 
+                200: 
+                    body: 
+                        application/json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: application/json
+                        application/vnd.onem2m-ntfy+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-ntfy+json"
+                        application/vnd.onem2m-attrs+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-attrs+json"
+                        application/vnd.onem2m-res+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-res+json"
+                        application/vnd.onem2m-attrs+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-attrs+xml"
+                        application/vnd.onem2m-ntfy+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-ntfy+xml"
+                        application/vnd.onem2m-res+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-res+xml"
+                        application/xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: application/xml
+                    displayName: 
+                        value: 200
+            headers: 
+                x-m2m-ri: 
+                    type: 
+                        type: string
+                        displayName: 
+                            value: type
+                    displayName: 
+                        value: "x-m2m-ri"
+            body: 
+                application/json: 
+                    type: Resource
+                    displayName: 
+                        value: application/json
+                application/vnd.onem2m-ntfy+json: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-ntfy+json"
+                application/vnd.onem2m-attrs+json: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-attrs+json"
+                application/vnd.onem2m-res+json: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-res+json"
+                application/vnd.onem2m-attrs+xml: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-attrs+xml"
+                application/vnd.onem2m-ntfy+xml: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-ntfy+xml"
+                application/vnd.onem2m-res+xml: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-res+xml"
+                application/xml: 
+                    type: Resource
+                    displayName: 
+                        value: application/xml
+            displayName: 
+                value: post
+        displayName: 
+            value: "/res/{uri: .+}"
+    /cse/{uri: .+}: 
+        post: 
+            responses: 
+                200: 
+                    body: 
+                        application/json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: application/json
+                        application/vnd.onem2m-ntfy+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-ntfy+json"
+                        application/vnd.onem2m-attrs+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-attrs+json"
+                        application/vnd.onem2m-res+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-res+json"
+                        application/vnd.onem2m-attrs+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-attrs+xml"
+                        application/vnd.onem2m-ntfy+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-ntfy+xml"
+                        application/vnd.onem2m-res+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-res+xml"
+                        application/xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: application/xml
+                    displayName: 
+                        value: 200
+            headers: 
+                x-m2m-ri: 
+                    type: 
+                        type: string
+                        displayName: 
+                            value: type
+                    displayName: 
+                        value: "x-m2m-ri"
+            body: 
+                application/json: 
+                    type: Resource
+                    displayName: 
+                        value: application/json
+                application/vnd.onem2m-ntfy+json: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-ntfy+json"
+                application/vnd.onem2m-attrs+json: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-attrs+json"
+                application/vnd.onem2m-res+json: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-res+json"
+                application/vnd.onem2m-attrs+xml: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-attrs+xml"
+                application/vnd.onem2m-ntfy+xml: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-ntfy+xml"
+                application/vnd.onem2m-res+xml: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-res+xml"
+                application/xml: 
+                    type: Resource
+                    displayName: 
+                        value: application/xml
+            displayName: 
+                value: post
+        delete: 
+            responses: 
+                200: 
+                    body: 
+                        application/json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: application/json
+                        application/vnd.onem2m-ntfy+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-ntfy+json"
+                        application/vnd.onem2m-attrs+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-attrs+json"
+                        application/vnd.onem2m-res+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-res+json"
+                        application/vnd.onem2m-attrs+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-attrs+xml"
+                        application/vnd.onem2m-ntfy+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-ntfy+xml"
+                        application/vnd.onem2m-res+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-res+xml"
+                        application/xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: application/xml
+                    displayName: 
+                        value: 200
+            headers: 
+                x-m2m-ri: 
+                    type: 
+                        type: string
+                        displayName: 
+                            value: type
+                    displayName: 
+                        value: "x-m2m-ri"
+            displayName: 
+                value: delete
+        get: 
+            responses: 
+                200: 
+                    body: 
+                        application/json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: application/json
+                        application/vnd.onem2m-ntfy+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-ntfy+json"
+                        application/vnd.onem2m-attrs+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-attrs+json"
+                        application/vnd.onem2m-res+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-res+json"
+                        application/vnd.onem2m-attrs+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-attrs+xml"
+                        application/vnd.onem2m-ntfy+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-ntfy+xml"
+                        application/vnd.onem2m-res+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-res+xml"
+                        application/xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: application/xml
+                    displayName: 
+                        value: 200
+            headers: 
+                x-m2m-ri: 
+                    type: 
+                        type: string
+                        displayName: 
+                            value: type
+                    displayName: 
+                        value: "x-m2m-ri"
+            displayName: 
+                value: get
+        put: 
+            responses: 
+                200: 
+                    body: 
+                        application/json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: application/json
+                        application/vnd.onem2m-ntfy+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-ntfy+json"
+                        application/vnd.onem2m-attrs+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-attrs+json"
+                        application/vnd.onem2m-res+json: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-res+json"
+                        application/vnd.onem2m-attrs+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-attrs+xml"
+                        application/vnd.onem2m-ntfy+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-ntfy+xml"
+                        application/vnd.onem2m-res+xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: "application/vnd.onem2m-res+xml"
+                        application/xml: 
+                            type: PrimitiveContent
+                            displayName: 
+                                value: application/xml
+                    displayName: 
+                        value: 200
+            headers: 
+                x-m2m-ri: 
+                    type: 
+                        type: string
+                        displayName: 
+                            value: type
+                    displayName: 
+                        value: "x-m2m-ri"
+            body: 
+                application/json: 
+                    type: Resource
+                    displayName: 
+                        value: application/json
+                application/vnd.onem2m-ntfy+json: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-ntfy+json"
+                application/vnd.onem2m-attrs+json: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-attrs+json"
+                application/vnd.onem2m-res+json: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-res+json"
+                application/vnd.onem2m-attrs+xml: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-attrs+xml"
+                application/vnd.onem2m-ntfy+xml: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-ntfy+xml"
+                application/vnd.onem2m-res+xml: 
+                    type: Resource
+                    displayName: 
+                        value: "application/vnd.onem2m-res+xml"
+                application/xml: 
+                    type: Resource
+                    displayName: 
+                        value: application/xml
+            displayName: 
+                value: put
+        displayName: 
+            value: "/cse/{uri: .+}"
+    displayName: 
+        value: /onem2m
