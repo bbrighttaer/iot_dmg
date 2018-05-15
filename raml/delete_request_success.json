@@ -1,0 +1,60 @@
+{
+  "any": [
+    {
+      "resourceType": 12,
+      "resourceID": "csedmg/cmd1",
+      "parentID": "csedmg",
+      "creationTime": "2018-05-15T08:33:00.206Z",
+      "lastModifiedTime": "2018-05-15T09:45:42.759Z",
+      "labels": [
+        "onem2m",
+        "mgmtcmd",
+        "IoT",
+        "DMG-CSF"
+      ],
+      "name": "cmd1",
+      "accessControlPolicyIDs": [],
+      "expirationTime": null,
+      "description": "UAV command",
+      "cmdType": 1001,
+      "execReqArgs": {
+        "reset": [
+          {
+            "anyArg": [
+              {
+                "name": "0",
+                "value": "www.m2m.mars.com",
+                "contentType": "application/json"
+              }
+            ]
+          }
+        ],
+        "reboot": [],
+        "upload": [],
+        "download": [],
+        "softwareInstall": [],
+        "softwareUpdate": [],
+        "softwareUninstall": [],
+        "genericArgs": [
+          {
+            "anyArg": [
+              {
+                "name": "0",
+                "value": "www.m2m.mars.com",
+                "contentType": "application/json"
+              }
+            ]
+          }
+        ]
+      },
+      "execEnable": false,
+      "execTarget": "nd.scout2-1d78e433-4011-439f-be8b-32373a351e50",
+      "execMode": 1,
+      "execFrequency": "P46Y4M9DT8H15M26.290S",
+      "execDelay": null,
+      "execNumber": 1,
+      "childResource": [],
+      "execInstanceOrSubscription": []
+    }
+  ]
+}

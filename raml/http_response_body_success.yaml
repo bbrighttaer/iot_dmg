@@ -1,0 +1,16 @@
+application/json:
+    type: PrimitiveContent
+    example:
+        type: <<response_success_json_example>>
+application/vnd.onem2m-res+json:
+    type: PrimitiveContent
+    example:
+        type: <<response_success_json_example>>
+application/vnd.onem2m-res+xml:
+    type: PrimitiveContent
+    example:
+        type: <<response_success_xml_example>>
+application/xml:
+    type: PrimitiveContent
+    example:
+        type: <<response_success_xml_example>>

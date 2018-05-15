@@ -1,0 +1,74 @@
+{
+  "resourceType":12,
+  "resourceID":null,
+  "parentID":null,
+  "creationTime":"2018-05-15T07:31:39.444Z",
+  "lastModifiedTime":"2018-05-15T07:31:39.445Z",
+  "labels":[
+    "onem2m",
+    "mgmtcmd",
+    "IoT",
+    "DMG-CSF"
+  ],
+  "name":"cmd1",
+  "accessControlPolicyIDs":[
+
+  ],
+  "expirationTime":null,
+  "description":"Device command",
+  "cmdType":1001,
+  "execReqArgs":{
+    "reset":[
+      {
+        "anyArg":[
+          {
+            "name":"0",
+            "value":"www.m2m.mars.com",
+            "contentType":"application/json"
+          }
+        ]
+      }
+    ],
+    "reboot":[
+
+    ],
+    "upload":[
+
+    ],
+    "download":[
+
+    ],
+    "softwareInstall":[
+
+    ],
+    "softwareUpdate":[
+
+    ],
+    "softwareUninstall":[
+
+    ],
+    "genericArgs":[
+      {
+        "anyArg":[
+          {
+            "name":"0",
+            "value":"www.m2m.mars.com",
+            "contentType":"application/json"
+          }
+        ]
+      }
+    ]
+  },
+  "execEnable":false,
+  "execTarget":"14774f87-3727-4d9c-b391-36bbab2e11e9",
+  "execMode":1,
+  "execFrequency":"P48Y4M14DT7H31M39.440S",
+  "execDelay":null,
+  "execNumber":1,
+  "childResource":[
+
+  ],
+  "execInstanceOrSubscription":[
+
+  ]
+}

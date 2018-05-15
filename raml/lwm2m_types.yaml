@@ -1,0 +1,116 @@
+#%RAML 1.0
+---
+types:
+    Attribute:
+        description: The the link format attributes of the LwM2M client object
+        type: object
+        properties:
+            key:
+                type: string
+            value:
+                type: object
+    LinkObject:
+        type: object
+        description: the links to all enabled LwM2M object instances
+        properties:
+            url:
+                type: string
+            attributes:
+                type: array
+                items: Attribute
+                uniqueItems: true
+            objectId:
+                type: integer
+                format: int32
+            objectInstanceId:
+                type: integer
+                format: int32
+    Lwm2mResource:
+        description:
+        type: object
+        properties:
+            id:
+                type: integer
+                format: int32
+            value:
+                type: object
+            values:
+                type: array
+                uniqueItems: true
+                items: object
+    Content:
+        type: object
+        description:
+        properties:
+            id:
+                type: integer
+                format: int32
+            resources:
+                type: array
+                items: Lwm2mResource
+                uniqueItems: true
+    ObjectInstance:
+        description:
+        type: object
+        properties:
+            status:
+                type: string
+            content:
+                type: Content
+    ObjectInstancesSet:
+        type: object
+        description:
+        properties:
+            objectId:
+                type: integer
+                format: int32
+            enabledInstances:
+                type: array
+                items: ObjectInstance[]
+                uniqueItems: true
+    Lwm2mClient:
+        description: The details of a connected LwM2M client
+        type: object
+        properties:
+            objectInstances:
+                type: array
+                items: ObjectInstancesSet
+                uniqueItems: true
+            registrationDate:
+                type: datetime
+                example: 2017-06-28T16:42:56.090Z
+            address:
+                type: string
+            port:
+                type: integer
+                format: int32
+            endpointId:
+                type: string
+            registrationId:
+                type: string
+            objectLinks:
+                type: array
+                items: LinkObject
+                uniqueItems: true
+            secure:
+                type: boolean
+    ObserveResponse:
+        description: models the data that is reported by the LwM2M management server as notifications from a device endpoint
+        type: object
+        properties:
+            endpointId:
+                type: string
+            objectId:
+                type: integer
+                format: int32
+            objectInstanceId:
+                type: integer
+                format: int32
+            resourceId:
+                type: integer
+                format: int32
+            value:
+                type: object
+                description: the data of the notification message
+            dataType:
+                type: string

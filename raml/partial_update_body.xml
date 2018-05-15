@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<m2m:mgc xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cmd1">
+    <exe>true</exe>
+</m2m:mgc>

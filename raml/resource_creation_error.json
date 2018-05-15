@@ -1,0 +1,5 @@
+{
+  "message": "The specified resource name: cmd1 already exists for this parent resource",
+  "errorCode": 1000,
+  "documentation": "http://maapi.marsLab.com/exceptions/defaultexception"
+}

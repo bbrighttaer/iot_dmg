@@ -1,536 +1,180 @@
 #%RAML 1.0
-title: 
-    value: MaaPI APIs
-baseUri: 
-    value: "http://localhost:8080/maapi/onem2m/cse/"
-mediaType: "*/*"
-version: 
-    value: 1.0
-types: 
-    Resource: 
-        type: object
-        description: 
-            value: |
-                <p>Java class for resource complex type.<p><p>The following schema fragment specifies the expected content contained within this class.<p><pre>&lt;complexType name="resource"&gt;&lt;complexContent&gt;&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;&lt;sequence&gt;&lt;element name="resourceType" type="{http://www.onem2m.org/xml/protocols}resourceType"/&gt;&lt;element name="resourceID" type="{http://www.onem2m.org/xml/protocols}ID"/&gt;&lt;element name="parentID" type="{http://www.onem2m.org/xml/protocols}nhURI"/&gt;&lt;element name="creationTime" type="{http://www.onem2m.org/xml/protocols}timestamp"/&gt;&lt;element name="lastModifiedTime" type="{http://www.onem2m.org/xml/protocols}timestamp"/&gt;&lt;element name="labels" type="{http://www.onem2m.org/xml/protocols}labels" minOccurs="0"/&gt;&lt;/sequence&gt;&lt;attribute name="name" use="required" type="{http://www.w3.org/2001/XMLSchema}token" /&gt;&lt;/restriction&gt;&lt;/complexContent&gt;&lt;/complexType&gt;</pre>
-        properties: 
-            creationTime: 
-                type: string
-                displayName: 
-                    value: creationTime
-            labels: 
-                type: array
-                items: 
-                    type: string
-                    displayName: 
-                        value: items
-                displayName: 
-                    value: labels
-            lastModifiedTime: 
-                type: string
-                displayName: 
-                    value: lastModifiedTime
-            name: 
-                type: string
-                displayName: 
-                    value: name
-            parentID: 
-                type: string
-                displayName: 
-                    value: parentID
-            resourceID: 
-                type: string
-                displayName: 
-                    value: resourceID
-            resourceType: 
-                format: int32
-                type: integer
-                displayName: 
-                    value: resourceType
-        example: 
-            strict: false
-            value: 
-                resourceID: csedmg/nd.House8.living_room.humidity_sensor
-                lastModifiedTime: "2018-05-11T07:24:46.794Z"
-                creationTime: "2018-05-11T07:24:46.794Z"
-                name: nd.House8.living_room.humidity_sensor
-                parentID: csedmg
-                labels: "['IoT', 'lwm2m', 'Node']"
-                resourceType: 14
-            displayName: 
-                value: example
-        displayName: 
-            value: Resource
-    PrimitiveContent: 
-        type: object
-        description: 
-            value: |
-                <p>Java class for primitiveContent complex type.<p><p>The following schema fragment specifies the expected content contained within this class.<p><pre>&lt;complexType name="primitiveContent"&gt;&lt;complexContent&gt;&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;&lt;sequence&gt;&lt;any processContents='lax' namespace='http://www.onem2m.org/xml/protocols' maxOccurs="unbounded" minOccurs="0"/&gt;&lt;/sequence&gt;&lt;/restriction&gt;&lt;/complexContent&gt;&lt;/complexType&gt;</pre>
-        properties: 
-            any: 
-                type: array
-                items: 
-                    type: Object
-                    displayName: 
-                        value: items
-                displayName: 
-                    value: any
-        example: 
-            strict: false
-            value: 
-                any: |
-                    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-                    <m2m:pc xmlns:m2m="http://www.onem2m.org/xml/protocols" xmlns:mqtt="http://www.mqtt.marslab.org" xmlns:ns4="http://www.marslab.org/xml/protocols">
-                        <m2m:nod rn="nd.House4.living_room.light_control">
-                            <ty>14</ty>
-                            <ri>csedmg/nd.House4.living_room.light_control</ri>
-                            <pi>csedmg</pi>
-                            <ct>2018-05-11T07:24:46.783Z</ct>
-                            <lt>2018-05-11T07:24:46.783Z</lt>
-                            <lbl>IoT lwm2m Node</lbl>
-                            <hcl>csedmg</hcl>
-                            <ch rn="LightControl" ty="13">http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House4.living_room.light_control/LightControl</ch>
-                            <ch rn="Battery" ty="13">http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House4.living_room.light_control/Battery</ch>
-                            <ch rn="Memory" ty="13">http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House4.living_room.light_control/Memory</ch>
-                            <ch rn="DeviceInfo" ty="13">http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House4.living_room.light_control/DeviceInfo</ch>
-                        </m2m:nod>
-                    </m2m:pc>
-            displayName: 
-                value: example
-        displayName: 
-            value: PrimitiveContent
-    Object: 
-        type: object
-        description: 
-            value: |
-                <p>Java class for primitiveContent complex type.<p><p>The following schema fragment specifies the expected content contained within this class.<p><pre>&lt;complexType name="primitiveContent"&gt;&lt;complexContent&gt;&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;&lt;sequence&gt;&lt;any processContents='lax' namespace='http://www.onem2m.org/xml/protocols' maxOccurs="unbounded" minOccurs="0"/&gt;&lt;/sequence&gt;&lt;/restriction&gt;&lt;/complexContent&gt;&lt;/complexType&gt;</pre>
-        displayName: 
-            value: Object
-/onem2m: 
-    /res/{uri: .+}: 
-        patch: 
-            responses: 
-                200: 
-                    body: 
-                        application/json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: application/json
-                        application/vnd.onem2m-ntfy+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-ntfy+json"
-                        application/vnd.onem2m-attrs+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-attrs+json"
-                        application/vnd.onem2m-res+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-res+json"
-                        application/vnd.onem2m-attrs+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-attrs+xml"
-                        application/vnd.onem2m-ntfy+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-ntfy+xml"
-                        application/vnd.onem2m-res+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-res+xml"
-                        application/xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: application/xml
-                    displayName: 
-                        value: 200
-            headers: 
-                x-m2m-ri: 
-                    type: 
-                        type: string
-                        displayName: 
-                            value: type
-                    displayName: 
-                        value: "x-m2m-ri"
-            body: 
-                application/json: 
-                    type: Resource
-                    displayName: 
-                        value: application/json
-                application/vnd.onem2m-ntfy+json: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-ntfy+json"
-                application/vnd.onem2m-attrs+json: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-attrs+json"
-                application/vnd.onem2m-res+json: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-res+json"
-                application/vnd.onem2m-attrs+xml: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-attrs+xml"
-                application/vnd.onem2m-ntfy+xml: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-ntfy+xml"
-                application/vnd.onem2m-res+xml: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-res+xml"
-                application/xml: 
-                    type: Resource
-                    displayName: 
-                        value: application/xml
-            displayName: 
-                value: patch
-        post: 
-            responses: 
-                200: 
-                    body: 
-                        application/json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: application/json
-                        application/vnd.onem2m-ntfy+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-ntfy+json"
-                        application/vnd.onem2m-attrs+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-attrs+json"
-                        application/vnd.onem2m-res+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-res+json"
-                        application/vnd.onem2m-attrs+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-attrs+xml"
-                        application/vnd.onem2m-ntfy+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-ntfy+xml"
-                        application/vnd.onem2m-res+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-res+xml"
-                        application/xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: application/xml
-                    displayName: 
-                        value: 200
-            headers: 
-                x-m2m-ri: 
-                    type: 
-                        type: string
-                        displayName: 
-                            value: type
-                    displayName: 
-                        value: "x-m2m-ri"
-            body: 
-                application/json: 
-                    type: Resource
-                    displayName: 
-                        value: application/json
-                application/vnd.onem2m-ntfy+json: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-ntfy+json"
-                application/vnd.onem2m-attrs+json: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-attrs+json"
-                application/vnd.onem2m-res+json: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-res+json"
-                application/vnd.onem2m-attrs+xml: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-attrs+xml"
-                application/vnd.onem2m-ntfy+xml: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-ntfy+xml"
-                application/vnd.onem2m-res+xml: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-res+xml"
-                application/xml: 
-                    type: Resource
-                    displayName: 
-                        value: application/xml
-            displayName: 
-                value: post
-        displayName: 
-            value: "/res/{uri: .+}"
-    /cse/{uri: .+}: 
-        post: 
-            responses: 
-                200: 
-                    body: 
-                        application/json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: application/json
-                        application/vnd.onem2m-ntfy+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-ntfy+json"
-                        application/vnd.onem2m-attrs+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-attrs+json"
-                        application/vnd.onem2m-res+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-res+json"
-                        application/vnd.onem2m-attrs+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-attrs+xml"
-                        application/vnd.onem2m-ntfy+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-ntfy+xml"
-                        application/vnd.onem2m-res+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-res+xml"
-                        application/xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: application/xml
-                    displayName: 
-                        value: 200
-            headers: 
-                x-m2m-ri: 
-                    type: 
-                        type: string
-                        displayName: 
-                            value: type
-                    displayName: 
-                        value: "x-m2m-ri"
-            body: 
-                application/json: 
-                    type: Resource
-                    displayName: 
-                        value: application/json
-                application/vnd.onem2m-ntfy+json: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-ntfy+json"
-                application/vnd.onem2m-attrs+json: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-attrs+json"
-                application/vnd.onem2m-res+json: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-res+json"
-                application/vnd.onem2m-attrs+xml: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-attrs+xml"
-                application/vnd.onem2m-ntfy+xml: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-ntfy+xml"
-                application/vnd.onem2m-res+xml: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-res+xml"
-                application/xml: 
-                    type: Resource
-                    displayName: 
-                        value: application/xml
-            displayName: 
-                value: post
-        delete: 
-            responses: 
-                200: 
-                    body: 
-                        application/json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: application/json
-                        application/vnd.onem2m-ntfy+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-ntfy+json"
-                        application/vnd.onem2m-attrs+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-attrs+json"
-                        application/vnd.onem2m-res+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-res+json"
-                        application/vnd.onem2m-attrs+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-attrs+xml"
-                        application/vnd.onem2m-ntfy+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-ntfy+xml"
-                        application/vnd.onem2m-res+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-res+xml"
-                        application/xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: application/xml
-                    displayName: 
-                        value: 200
-            headers: 
-                x-m2m-ri: 
-                    type: 
-                        type: string
-                        displayName: 
-                            value: type
-                    displayName: 
-                        value: "x-m2m-ri"
-            displayName: 
-                value: delete
-        get: 
-            responses: 
-                200: 
-                    body: 
-                        application/json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: application/json
-                        application/vnd.onem2m-ntfy+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-ntfy+json"
-                        application/vnd.onem2m-attrs+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-attrs+json"
-                        application/vnd.onem2m-res+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-res+json"
-                        application/vnd.onem2m-attrs+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-attrs+xml"
-                        application/vnd.onem2m-ntfy+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-ntfy+xml"
-                        application/vnd.onem2m-res+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-res+xml"
-                        application/xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: application/xml
-                    displayName: 
-                        value: 200
-            headers: 
-                x-m2m-ri: 
-                    type: 
-                        type: string
-                        displayName: 
-                            value: type
-                    displayName: 
-                        value: "x-m2m-ri"
-            displayName: 
-                value: get
-        put: 
-            responses: 
-                200: 
-                    body: 
-                        application/json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: application/json
-                        application/vnd.onem2m-ntfy+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-ntfy+json"
-                        application/vnd.onem2m-attrs+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-attrs+json"
-                        application/vnd.onem2m-res+json: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-res+json"
-                        application/vnd.onem2m-attrs+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-attrs+xml"
-                        application/vnd.onem2m-ntfy+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-ntfy+xml"
-                        application/vnd.onem2m-res+xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: "application/vnd.onem2m-res+xml"
-                        application/xml: 
-                            type: PrimitiveContent
-                            displayName: 
-                                value: application/xml
-                    displayName: 
-                        value: 200
-            headers: 
-                x-m2m-ri: 
-                    type: 
-                        type: string
-                        displayName: 
-                            value: type
-                    displayName: 
-                        value: "x-m2m-ri"
-            body: 
-                application/json: 
-                    type: Resource
-                    displayName: 
-                        value: application/json
-                application/vnd.onem2m-ntfy+json: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-ntfy+json"
-                application/vnd.onem2m-attrs+json: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-attrs+json"
-                application/vnd.onem2m-res+json: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-res+json"
-                application/vnd.onem2m-attrs+xml: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-attrs+xml"
-                application/vnd.onem2m-ntfy+xml: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-ntfy+xml"
-                application/vnd.onem2m-res+xml: 
-                    type: Resource
-                    displayName: 
-                        value: "application/vnd.onem2m-res+xml"
-                application/xml: 
-                    type: Resource
-                    displayName: 
-                        value: application/xml
-            displayName: 
-                value: put
-        displayName: 
-            value: "/cse/{uri: .+}"
-    displayName: 
-        value: /onem2m
+---
+title: maapi documentation
+baseUri: http:localhost:8080/maapi
+version: ma.v3
+
+uses:
+    lwm2mTypes: raml/lwm2m_types.yaml
+types:
+    Resource: !include raml/CDT-commonTypes-v1_6_0.xsd#resource
+    PrimitiveContent: !include raml/CDT-commonTypes-v1_6_0.xsd#primitiveContent
+    Lwm2mClient: lwm2mTypes.Lwm2mClient
+    ObserveResponse: lwm2mTypes.ObserveResponse
+traits:
+    onem2m_http_request_without_body_headers:
+        headers:
+            x-m2m-ri:
+                description: the request ID
+                example: 289f87a6-50ee-4260-a904-07a409e63b4b
+            accept:
+                examples:
+                    xml: application/vnd.onem2m-res+xml
+                    json: application/vnd.onem2m-res+json
+    onem2m_http_request_with_body_headers:
+        headers:
+            x-m2m-ri:
+                description: the request ID
+                example: 289f87a6-50ee-4260-a904-07a409e63b4b
+            content-type:
+                description: The usual Media type and the resource type argument (ty) indicating the oneM2M resource type
+                examples:
+                    xml: application/vnd.onem2m-res+xml;ty=12
+                    json: application/vnd.onem2m-res+json;ty=12
+            accept:
+                examples:
+                    xml: application/vnd.onem2m-res+xml
+                    json: application/vnd.onem2m-res+json
+    request_body:
+        description: The body of the <<request_type>> request
+        body:
+            application/json:
+                type: Resource
+                example: !include raml/command_resource.json
+            application/vnd.onem2m-res+json:
+                type: Resource
+                example: !include raml/command_resource.json
+            applicaiton/xml:
+                type: Resource
+                example: !include raml/command_resource.xml
+            applicaiton/vnd.onem2m-res+xml:
+                type: Resource
+                example: !include raml/command_resource.xml
+    partial_request_body:
+        description: The body of the partial update request.
+        body:
+            application/json:
+                type: Resource
+                example: !include raml/partial_update_body.json
+            application/vnd.onem2m-res+json:
+                type: Resource
+                example: !include raml/partial_update_body.json
+            application/xml:
+                type: Resource
+                example: !include raml/partial_update_body.xml
+            application/vnd.onem2m-res+xml:
+                type: Resource
+                example: !include raml/partial_update_body.xml
+    response_201:
+        responses:
+            201:
+                headers: !include raml/http_response_headers.yaml
+                body: !include raml/http_response_body_success.yaml
+            404:
+                headers: !include raml/http_response_headers.yaml
+                body: !include raml/http_response_body_error.yaml
+    response_200:
+        responses:
+            200:
+                headers: !include raml/http_response_headers.yaml
+                body: !include raml/http_response_body_success.yaml
+            404:
+                headers: !include raml/http_response_headers.yaml
+                body: !include raml/http_response_body_error.yaml
+resourceTypes:
+    crud:
+        description: APIs for Create, Retrieve, Update, and Delete - oneM2M CRUD operations
+        post:
+            is: [
+                onem2m_http_request_with_body_headers,
+                request_body: {request_type: "create"},
+                response_201: {
+                       response_success_json_example: !include raml/resource_creation_success.json,
+                       response_success_xml_example:  !include raml/resource_creation_success.xml,
+                       response_error_json_example: !include raml/resource_creation_error.json,
+                       response_error_xml_example: !include raml/resource_creation_error.xml
+                    }
+                ]
+        get:
+            is: [
+                onem2m_http_request_without_body_headers,
+                request_body: {request_type: "retrieve"},
+                response_200: {
+                       response_success_json_example: !include raml/retrieve_response.json,
+                       response_success_xml_example:  !include raml/retrieve_response.xml,
+                       response_error_json_example: !include raml/retrieve_response_error.json,
+                       response_error_xml_example: !include raml/retrieve_response_error.xml
+                    }
+                ]
+        put:
+            is: [
+                onem2m_http_request_with_body_headers,
+                request_body: {request_type: "update"},
+                response_200: {
+                       response_success_json_example: !include raml/update_request_success.json,
+                       response_success_xml_example:  !include raml/update_request_success.xml,
+                       response_error_json_example: !include raml/update_request_error.json,
+                       response_error_xml_example: !include raml/update_request_error.xml
+                    }
+                ]
+        delete:
+            is: [
+                onem2m_http_request_without_body_headers,
+                request_body: {request_type: "delete"},
+                response_200: {
+                       response_success_json_example: !include raml/delete_request_success.json,
+                       response_success_xml_example:  !include raml/delete_request_success.xml,
+                       response_error_json_example: !include raml/delete_request_error.json,
+                       response_error_xml_example: !include raml/delete_request_error.xml
+                    }
+                ]
+    partial_update:
+        patch:
+            is: [
+                onem2m_http_request_with_body_headers,
+                request_body: {request_type: "patch"},
+                response_200: {
+                       response_success_json_example: !include raml/partial_update_body.json,
+                       response_success_xml_example:  !include raml/partial_update_body.xml,
+                       response_error_json_example: !include raml/update_request_error.json,
+                       response_error_xml_example: !include raml/update_request_error.xml
+                    }
+                ]
+        post:
+            is: [
+                onem2m_http_request_with_body_headers,
+                request_body: {request_type: "patch"},
+                response_200: {
+                       response_success_json_example: !include raml/partial_update_body.json,
+                       response_success_xml_example:  !include raml/partial_update_body.xml,
+                       response_error_json_example: !include raml/update_request_error.json,
+                       response_error_xml_example: !include raml/update_request_error.xml
+                    }
+                ]
+/onem2m:
+    /cse:
+        /{uri:.+}:
+            type: crud
+    /res:
+        /{uri:.+}:
+            type: partial_update
+
+/notification:
+    description: |
+            The resources that are exposed towards the LwM2M management server.
+            The management server uses these APIs to report device registration/de-registrations and observations (notifications)
+    /observation:
+        post:
+            body:
+                application/json:
+                    type: lwm2mTypes.ObserveResponse
+    /device:
+        post:
+            body:
+                application/json:
+                    type: lwm2mTypes.Lwm2mClient
+        /{endpoint}:
+            delete:
+                body:
+                    application/json:
+                        type: lwm2mTypes.Lwm2mClient

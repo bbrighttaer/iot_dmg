@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<m2m:pc xmlns:m2m="http://www.onem2m.org/xml/protocols" xmlns:mqtt="http://www.mqtt.marslab.org" xmlns:ns4="http://www.marslab.org/xml/protocols">
+    <m2m:nod rn="nd.House3.bed_room.temperature_sensor">
+        <ty>14</ty>
+        <ri>csedmg/nd.House3.bed_room.temperature_sensor</ri>
+        <pi>csedmg</pi>
+        <ct>2018-05-15T04:25:42.540Z</ct>
+        <lt>2018-05-15T04:25:42.540Z</lt>
+        <lbl>IoT lwm2m Node</lbl>
+        <hcl>csedmg</hcl>
+        <ch rn="Battery" ty="13">http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House3.bed_room.temperature_sensor/Battery</ch>
+        <ch rn="Memory" ty="13">http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House3.bed_room.temperature_sensor/Memory</ch>
+        <ch rn="DeviceInfo" ty="13">http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House3.bed_room.temperature_sensor/DeviceInfo</ch>
+        <ch rn="TemperatureSensor" ty="13">http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House3.bed_room.temperature_sensor/TemperatureSensor</ch>
+    </m2m:nod>
+</m2m:pc>

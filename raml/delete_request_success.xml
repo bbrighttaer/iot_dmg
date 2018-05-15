@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<m2m:pc xmlns:m2m="http://www.onem2m.org/xml/protocols" xmlns:mqtt="http://www.mqtt.marslab.org" xmlns:ns4="http://www.marslab.org/xml/protocols">
+    <m2m:mgc rn="cmd1">
+        <ty>12</ty>
+        <ri>csedmg/cmd1</ri>
+        <pi>csedmg</pi>
+        <ct>2018-05-15T09:53:04.540Z</ct>
+        <lt>2018-05-15T09:53:04.540Z</lt>
+        <lbl>onem2m mgmtcmd IoT DMG-CSF onem2m mgmtcmd IoT DMG-CSF</lbl>
+        <dc>UAV command</dc>
+        <cmt>1002</cmt>
+        <exra>
+            <genArg>
+                <anyArg>
+                    <nm>0</nm>
+                    <val xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">ON</val>
+                    <contentType>text/plain</contentType>
+                </anyArg>
+            </genArg>
+        </exra>
+        <exe>false</exe>
+        <ext>f668684b-22b8-42fd-90a5-e3d84ceec69e</ext>
+        <exm>1</exm>
+        <exf>P46Y4M9DT8H15M26.290S</exf>
+        <exn>1</exn>
+    </m2m:mgc>
+</m2m:pc>

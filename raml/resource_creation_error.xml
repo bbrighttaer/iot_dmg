@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<errorMessage xmlns:m2m="http://www.onem2m.org/xml/protocols" xmlns:mqtt="http://www.mqtt.marslab.org" xmlns:ns4="http://www.marslab.org/xml/protocols">
+    <documentation>http://maapi.marsLab.com/exceptions/defaultexception</documentation>
+    <errorCode>1000</errorCode>
+    <message>The specified resource name: cmd1 already exists for this parent resource</message>
+</errorMessage>

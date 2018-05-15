@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<m2m:pc xmlns:m2m="http://www.onem2m.org/xml/protocols" xmlns:mqtt="http://www.mqtt.marslab.org" xmlns:ns4="http://www.marslab.org/xml/protocols">
+    <m2m:mgc rn="cmd1">
+        <ty>12</ty>
+        <ri>csedmg/cmd1</ri>
+        <pi>csedmg</pi>
+        <ct>2018-05-15T08:33:00.206Z</ct>
+        <lt>2018-05-15T09:45:42.759Z</lt>
+        <lbl>onem2m mgmtcmd IoT DMG-CSF</lbl>
+        <acpi></acpi>
+        <dc>UAV command</dc>
+        <cmt>1001</cmt>
+        <exra>
+            <rst>
+                <any>
+                    <nm>0</nm>
+                    <val xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">www.m2m.mars.com</val>
+                    <contentType>application/json</contentType>
+                </any>
+            </rst>
+            <genArg>
+                <anyArg>
+                    <nm>0</nm>
+                    <val xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">www.m2m.mars.com</val>
+                    <contentType>application/json</contentType>
+                </anyArg>
+            </genArg>
+        </exra>
+        <exe>false</exe>
+        <ext>nd.scout2-1d78e433-4011-439f-be8b-32373a351e50</ext>
+        <exm>1</exm>
+        <exf>P46Y4M9DT8H15M26.290S</exf>
+        <exn>1</exn>
+    </m2m:mgc>
+</m2m:pc>

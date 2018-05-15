@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<m2m:pc xmlns:m2m="http://www.onem2m.org/xml/protocols" xmlns:mqtt="http://www.mqtt.marslab.org" xmlns:ns4="http://www.marslab.org/xml/protocols">
+    <info>
+        <message>http://localhost:8080/maapi/onem2m/cse/csedmg/cmd1</message>
+    </info>
+</m2m:pc>

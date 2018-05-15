@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<m2m:pc xmlns:m2m="http://www.onem2m.org/xml/protocols" xmlns:mqtt="http://www.mqtt.marslab.org" xmlns:ns4="http://www.marslab.org/xml/protocols">
+    <errorMessage>
+        <documentation>http://maapi.marsLab.com/exceptions/defaultexception</documentation>
+        <errorCode>4004</errorCode>
+        <message>The specified target:csedmg/cmd2 could not be updated</message>
+    </errorMessage>
+</m2m:pc>

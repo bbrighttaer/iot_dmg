@@ -1,0 +1,7 @@
+{
+  "any": [
+    {
+      "message": "http://localhost:8080/maapi/onem2m/cse/csedmg/cmd1"
+    }
+  ]
+}

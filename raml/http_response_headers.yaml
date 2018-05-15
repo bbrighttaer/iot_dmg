@@ -1,0 +1,11 @@
+x-m2m-origin:
+    description: Contains the ID of the response originator
+    example: csedmg
+x-m2m-rsc:
+    description: Contains the oneM2M response code
+x-m2m-ri:
+    description: Contains the ID of the request which maps to the response
+    example: 289f87a6-50ee-4260-a904-07a409e63b4b
+etag:
+    description: a tag on a representation for caching
+    example: 1943887712

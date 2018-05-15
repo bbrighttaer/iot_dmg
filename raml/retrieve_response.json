@@ -1,0 +1,46 @@
+{
+  "any": [
+    {
+      "resourceType": 14,
+      "resourceID": "csedmg/nd.House3.bed_room.temperature_sensor",
+      "parentID": "csedmg",
+      "creationTime": "2018-05-15T04:25:42.540Z",
+      "lastModifiedTime": "2018-05-15T04:25:42.540Z",
+      "labels": [
+        "IoT",
+        "lwm2m",
+        "Node"
+      ],
+      "name": "nd.House3.bed_room.temperature_sensor",
+      "accessControlPolicyIDs": [],
+      "expirationTime": null,
+      "announceTo": [],
+      "announcedAttribute": [],
+      "nodeID": null,
+      "hostedCSELink": "csedmg",
+      "childResource": [
+        {
+          "value": "http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House3.bed_room.temperature_sensor/Battery",
+          "resourceName": "Battery",
+          "type": 13
+        },
+        {
+          "value": "http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House3.bed_room.temperature_sensor/Memory",
+          "resourceName": "Memory",
+          "type": 13
+        },
+        {
+          "value": "http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House3.bed_room.temperature_sensor/DeviceInfo",
+          "resourceName": "DeviceInfo",
+          "type": 13
+        },
+        {
+          "value": "http://localhost:8080/maapi/onem2m/cse/csedmg/nd.House3.bed_room.temperature_sensor/TemperatureSensor",
+          "resourceName": "TemperatureSensor",
+          "type": 13
+        }
+      ],
+      "memoryOrBatteryOrAreaNwkInfo": []
+    }
+  ]
+}
